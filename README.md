@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🪶 **Digital Signature Verifier**
 
-## Getting Started
+A sleek and elegant web application built with **Next.js (TypeScript)** that allows users to **sign and verify files using RSA digital signatures** — ensuring **authenticity** and **integrity**.
 
-First, run the development server:
+> 🔐 “Secure your files. Verify with confidence.”
+
+---
+
+### ✨ **Features**
+
+* 📂 Upload files for signing or verification
+* 🔑 Sign files using a **private key**
+* 🧾 Verify signatures using a **public key**
+* 🧠 Demonstrates **data integrity and authenticity**
+* 💅 Elegant **Soft Cocoa White** theme with warm tones and smooth shadows
+* ⚡ Built with **Next.js, TypeScript, and Tailwind CSS**
+
+---
+
+### 🧱 **Tech Stack**
+
+| Category   | Technologies                                                  |
+| ---------- | ------------------------------------------------------------- |
+| Framework  | [Next.js 14+ (TypeScript)](https://nextjs.org/)               |
+| Styling    | [Tailwind CSS](https://tailwindcss.com/)                      |
+| Encryption | [Node.js `crypto` module](https://nodejs.org/api/crypto.html) |
+| UI Design  | Minimalist Glassmorphism + Warm White & Cocoa theme           |
+
+---
+
+### 🧩 **Project Structure**
+
+```
+digital-signature-verifier/
+│
+├── app/
+│   ├── page.tsx              # Main UI
+│   ├── api/
+│   │   ├── sign/route.ts     # API endpoint to sign file
+│   │   └── verify/route.ts   # API endpoint to verify file
+│
+├── public/
+│   └── uploads/              # Stores signed files locally
+│
+├── components/
+│   └── FileUpload.tsx        # File upload UI component
+│
+├── styles/
+│   └── globals.css           # Tailwind + theme overrides
+│
+├── tailwind.config.ts        # Tailwind theme config
+├── package.json
+└── README.md
+```
+
+---
+
+### ⚙️ **Getting Started**
+
+#### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/<your-username>/digital-signature-verifier.git
+cd digital-signature-verifier
+```
+
+#### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+#### 3️⃣ Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open **[http://localhost:3000](http://localhost:3000)** ✨
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔐 **How It Works**
 
-## Learn More
+1. **File Signing**
 
-To learn more about Next.js, take a look at the following resources:
+   * Upload a file and your **private key (.pem)**.
+   * The server generates a **digital signature** using RSA SHA256.
+   * A signed copy of your file is saved in `/public/uploads/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Signature Verification**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   * Upload the **signed file** and the **public key**.
+   * The system validates the file’s integrity.
+   * Displays `✅ Verified` or `❌ Signature mismatch`.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🎨 **Theme: Soft Cocoa White**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Element    | Color     | Description             |
+| ---------- | --------- | ----------------------- |
+| Background | `#F8F6F3` | Warm off-white          |
+| Card       | `#EDE8E3` | Soft beige              |
+| Accent     | `#8B5E3C` | Cocoa brown             |
+| Text       | `#1F1F1F` | Deep neutral gray-black |
+| Success    | `#3B7A57` | Warm green              |
+| Error      | `#B23A48` | Muted warm red          |
+
+---
+
+### 🧑‍💻 **Author**
+
+**Hriday Sonawane**
+💼 MERN Stack & Next.js Developer
+📧 [[your-email@example.com](mailto:your-email@example.com)]
+🌐 [your-portfolio-link.com]
+
+---
+
+### 🧭 **License**
+
+This project is licensed under the **MIT License** — feel free to use and modify it.
