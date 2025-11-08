@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const HeroHeaderSection = () => {
   return (
-    <section className="w-full h-screen bg-background-dark text-white flex items-center justify-center px-16 py-16">
+    <section className="w-full h-[calc(100vh-3.5rem)] bg-background-dark text-white flex items-center justify-center px-16 py-16">
       <div className="w-full h-full overflow-hidden flex flex-col items-center justify-center gap-8 relative">
         <Image
           src={"/background-6.jpg"}

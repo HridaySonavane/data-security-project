@@ -32,14 +32,15 @@ const Navbar = () => {
             <Link href="/">Home</Link>
             <Link href="/features">About</Link>
             <Link href="/about">Contact</Link>
-            <Link
-              href="/"
-              className="flex items-center gap-1"
-              onClick={() => setClicked(!clicked)}
-            >
-              more
-              <ChevronDown animateOnHover size={18} />
-            </Link>
+            <button>
+              <p
+                className="flex items-center gap-1 cursor-pointer"
+                onClick={() => setClicked(!clicked)}
+              >
+                more
+                <ChevronDown animateOnHover size={18} />
+              </p>
+            </button>
           </div>
         </div>
         <div className="flex items-center justify-between gap-4">
@@ -56,7 +57,7 @@ const Navbar = () => {
       </nav>
 
       {clicked && (
-        <div className="absolute w-full h-fit px-12 py-6 bg-background-light text-gray-200 grid grid-cols-4 z-10">
+        <div className="absolute w-full h-fit px-12 py-6 bg-background-light text-gray-200 grid grid-cols-4 z-20">
           <div>
             {/* card heading */}
             <h3 className="font-extrabold text-sm">resources</h3>
