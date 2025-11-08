@@ -120,8 +120,7 @@ Then open **[http://localhost:3000](http://localhost:3000)** to explore ✨
 
 **Hriday Sonawane**
 💼 MERN Stack & Next.js Developer
-📧 [your-email@example.com](mailto:your-email@example.com)
-🌐 [your-portfolio-link.com](https://your-portfolio-link.com)
+📧 [hridays2005@gmail.com](mailto:hridays2005@gmail.com)
 
 ---
 
