@@ -303,8 +303,7 @@ export default function Dashboard() {
             </p>
             <Button
               onClick={verifyFile}
-              disabled={!file || !publicKey || !signature}
-              className="w-full bg-linear-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 disabled:bg-slate-700 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-all"
+              className="w-full bg-linear-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold rounded-lg transition-all"
             >
               Verify Signature
             </Button>
