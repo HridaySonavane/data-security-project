@@ -124,7 +124,6 @@ This project is licensed under the **MIT License** — feel free to use and modi
 
 
 
-```markdown
 # 🪶 **Signora — Digital Signature Verifier**
 
 **Signora** is a sleek and elegant web application built with **Next.js (TypeScript)** that empowers users to **sign and verify files using RSA digital signatures**, ensuring **authenticity**, **integrity**, and **trust**.
