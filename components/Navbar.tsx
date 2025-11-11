@@ -30,8 +30,8 @@ const Navbar = () => {
 
           <div className="flex items-center gap-6 ml-8 text-xs">
             <Link href="/">Home</Link>
-            <Link href="/features">About</Link>
-            <Link href="/about">Contact</Link>
+            <Link href="/">About</Link>
+            <Link href="/">Contact</Link>
             <button>
               <p
                 className="flex items-center gap-1 cursor-pointer"
@@ -42,17 +42,6 @@ const Navbar = () => {
               </p>
             </button>
           </div>
-        </div>
-        <div className="flex items-center justify-between gap-4">
-          <Button className="text-xs font-sans font-bold px-3 py-2 h-fit bg-primary/60">
-            Login
-          </Button>
-          <Button
-            className="text-xs font-sans font-bold px-3 py-2 h-fit bg-[#BFA98A]"
-            variant={"secondary"}
-          >
-            Sign Up
-          </Button>
         </div>
       </nav>
 

@@ -30,6 +30,7 @@ export default function Dashboard() {
     setPrivateKey(data.privateKey);
     setMessage(data.message);
     setActiveTab("sign");
+    console.log(data.publicKey, data.privateKey);
   };
 
   const signFile = async () => {
@@ -313,7 +314,7 @@ export default function Dashboard() {
         {/* Output Section */}
         {(publicKey || privateKey || signature || message) && (
           <Card className="p-8 border-slate-700 bg-slate-800/50 backdrop-blur border-2 border-blue-500/20">
-            <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
+            <h3 className="text-lg font-bold mb-6 text-white/90 flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-green-400" />
               Results & Output
             </h3>
