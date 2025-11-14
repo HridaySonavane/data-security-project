@@ -4,14 +4,30 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown } from "./animate-ui/icons/chevron-down";
 import { Button } from "./ui/button";
-import Card from "./Card";
+import { ChevronRight } from "lucide-react";
 
 const Navbar = () => {
   const subNavItems = [
-    { title: "Sign in", description: "Access your account", icon: "icon" },
-    { title: "Get Started", description: "Access your account", icon: "icon" },
-    { title: "Explore", description: "Access your account", icon: "icon" },
-    { title: "Learn more", description: "Access your account", icon: "icon" },
+    {
+      title: "Sign in",
+      description: "Access your account",
+      icon: ChevronRight,
+    },
+    {
+      title: "Get Started",
+      description: "Access your account",
+      icon: ChevronRight,
+    },
+    {
+      title: "Explore",
+      description: "Access your account",
+      icon: ChevronRight,
+    },
+    {
+      title: "Learn more",
+      description: "Access your account",
+      icon: ChevronRight,
+    },
   ];
 
   const [clicked, setClicked] = useState(false);
@@ -28,10 +44,10 @@ const Navbar = () => {
             className="object-contain"
           />
 
-          <div className="flex items-center gap-6 ml-8 text-xs">
+          <div className="flex items-center gap-6 ml-8 text-sm font-sans">
             <Link href="/">Home</Link>
-            <Link href="/">About</Link>
-            <Link href="/">Contact</Link>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
             <button>
               <p
                 className="flex items-center gap-1 cursor-pointer"
@@ -49,7 +65,7 @@ const Navbar = () => {
         <div className="absolute w-full h-fit px-12 py-6 bg-background-light text-gray-200 grid grid-cols-4 z-20">
           <div>
             {/* card heading */}
-            <h3 className="font-extrabold text-sm">resources</h3>
+            <h3 className="font-bold text-base">Resources</h3>
 
             {/* card items */}
             {subNavItems.map(({ title, description, icon }) => (
@@ -58,9 +74,9 @@ const Navbar = () => {
                 href="/"
                 className="flex items-center gap-2 my-4"
               >
-                <span>{icon}</span>
+                {React.createElement(icon)}
                 <div>
-                  <h4 className="font-black text-sm font-sans">{title}</h4>
+                  <h4 className="font-extrabold text-sm font-sans">{title}</h4>
                   <p className="font-medium text-xs font-sans">{description}</p>
                 </div>
               </Link>
@@ -68,7 +84,7 @@ const Navbar = () => {
           </div>
           <div>
             {/* card heading */}
-            <h3 className="font-extrabold text-sm">page group two</h3>
+            <h3 className="font-bold text-base">Page Group Two</h3>
 
             {/* card items */}
             {subNavItems.map(({ title, description, icon }) => (
@@ -77,9 +93,9 @@ const Navbar = () => {
                 href="/"
                 className="flex items-center gap-2 my-4"
               >
-                <span>{icon}</span>
+                {React.createElement(icon)}
                 <div>
-                  <h4 className="font-black text-sm font-sans">{title}</h4>
+                  <h4 className="font-extrabold text-sm font-sans">{title}</h4>
                   <p className="font-medium text-xs font-sans">{description}</p>
                 </div>
               </Link>
@@ -87,7 +103,7 @@ const Navbar = () => {
           </div>
           <div>
             {/* card heading */}
-            <h3 className="font-extrabold text-sm">additional links</h3>
+            <h3 className="font-bold text-base">Additional Links</h3>
 
             {/* card items */}
             {subNavItems.map(({ title, description, icon }) => (
@@ -96,9 +112,9 @@ const Navbar = () => {
                 href="/"
                 className="flex items-center gap-2 my-4"
               >
-                <span>{icon}</span>
+                {React.createElement(icon)}
                 <div>
-                  <h4 className="font-black text-sm font-sans">{title}</h4>
+                  <h4 className="font-extrabold text-sm font-sans">{title}</h4>
                   <p className="font-medium text-xs font-sans">{description}</p>
                 </div>
               </Link>

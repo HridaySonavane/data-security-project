@@ -12,6 +12,7 @@ import {
   Shield,
   Zap,
   Upload,
+  Copy,
 } from "lucide-react";
 
 export default function Dashboard() {
@@ -183,22 +184,34 @@ export default function Dashboard() {
             <Button
               onClick={generateKeys}
               className={`w-full bg-linear-to-r from-orange-600 to-amber-700 hover:from-orange-700 hover:to-amber-800 ${
-                activeTab === "generate" ? "text-white/90" : "text-white/70"
+              activeTab === "generate" ? "text-white/90" : "text-white/70"
               } font-semibold rounded-lg transition-all`}
             >
               Generate New Keys
             </Button>
-          </Card>
+            {publicKey && (
+              <p
+              onClick={() => {
+                navigator.clipboard.writeText(publicKey);
+                setMessage("Public key copied to clipboard!");
+              }}
+              className="text-muted-foreground flex items-center justify-center gap-2 text-center mb-6 text-sm leading-relaxed hover:underline cursor-pointer group"
+              >
+              Copy Public here{" "}
+              <Copy className="group-hover:scale-[1.03] group-active:scale-[0.97]" />
+              </p>
+            )}
+            </Card>
 
-          {/* Sign File Card */}
-          <Card
+            {/* Sign File Card */}
+            <Card
             className={`p-8 transition-all duration-300 transform cursor-pointer border-slate-700 bg-slate-800/50 hover:bg-slate-800 ${
               activeTab === "sign"
-                ? "ring-2 ring-cyan-500 scale-105"
-                : "opacity-70 hover:opacity-100"
+              ? "ring-2 ring-cyan-500 scale-105"
+              : "opacity-70 hover:opacity-100"
             }`}
             onClick={() => setActiveTab("sign")}
-          >
+            >
             <div className="mb-6">
               <div className="w-14 h-14 rounded-xl bg-linear-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center mb-4 border border-cyan-500/20">
                 <FileUp className="w-7 h-7 text-cyan-400" />
@@ -313,7 +326,7 @@ export default function Dashboard() {
 
         {/* Output Section */}
         {(publicKey || privateKey || signature || message) && (
-          <Card className="p-8 border-slate-700 bg-slate-800/50 backdrop-blur border-2 border-blue-500/20">
+          <Card className="p-8 bg-slate-800/50 backdrop-blur border-2 border-blue-500/20">
             <h3 className="text-lg font-bold mb-6 text-white/90 flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-green-400" />
               Results & Output
